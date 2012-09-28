@@ -1,0 +1,14 @@
+DDR Compare is released under the Apache License, Version 2.0. 
+
+~~~
+
+DDR Compare uses the following 3rd party software:
+* WURFL, GPLv2 license
+  http://sourceforge.net/projects/wurfl/
+
+DDR Compare uses and delivers, as part of the project, 
+the following 3rd party software:
+* OpenDDR, GPLv2 and LGPLv2.0 licenses
+  https://github.com/OpenDDRdotORG/OpenDDR-Java
+* 51Degrees.mobi, MPLv2 license
+  http://sourceforge.net/projects/fiftyone-java/
