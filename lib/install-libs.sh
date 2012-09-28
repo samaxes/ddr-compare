@@ -1,4 +1,4 @@
 #Install maven artifacts
 mvn install:install-file -DgroupId=org.w3c.ddr.simple -DartifactId=DDR-Simple-API -Dversion=2008-03-30 -Dpackaging=jar -Dfile=DDR-Simple-API.jar -DgeneratePom=true -DcreateChecksum=true
 mvn install:install-file -DgroupId=org.openddr.simpleapi.oddr -DartifactId=OpenDDR-Simple-API -Dversion=1.0.0.10 -Dpackaging=jar -Dfile=OpenDDR-Simple-API-1.0.0.10.jar -DgeneratePom=true -DcreateChecksum=true
-mvn mvn install:install-file -DgroupId=mobi.51degrees -DartifactId=detection -Dversion=2.1.15.1 -Dpackaging=jar -Dfile=51Degrees.mobi.detection.jar -DgeneratePom=true -DcreateChecksum=true
+mvn install:install-file -DgroupId=mobi.51degrees -DartifactId=detection -Dversion=2.1.15.1 -Dpackaging=jar -Dfile=51Degrees.mobi.detection.jar -DgeneratePom=true -DcreateChecksum=true

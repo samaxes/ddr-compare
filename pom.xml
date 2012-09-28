@@ -10,7 +10,7 @@
 
     <name>DDR Compare</name>
     <description>Device Description Repositories comparison.</description>
-    <url>https://github.com/samaxes/java-ee-testing</url><!-- TODO -->
+    <url>https://github.com/samaxes/ddr-compare</url>
     <inceptionYear>2012</inceptionYear>
     <organization>
         <name>samaxes</name>
@@ -39,12 +39,12 @@
 
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/samaxes/java-ee-testing/issues</url><!-- TODO -->
+        <url>https://github.com/samaxes/ddr-compare/issues</url>
     </issueManagement>
     <scm>
-        <connection>scm:git:git://github.com/samaxes/java-ee-testing.git</connection><!-- TODO -->
-        <developerConnection>scm:git:git@github.com:samaxes/java-ee-testing.git</developerConnection><!-- TODO -->
-        <url>https://github.com/samaxes/java-ee-testing</url><!-- TODO -->
+        <connection>scm:git:git://github.com/samaxes/ddr-compare.git</connection>
+        <developerConnection>scm:git:git@github.com:samaxes/ddr-compare.git</developerConnection>
+        <url>https://github.com/samaxes/ddr-compare</url>
     </scm>
 
     <prerequisites>
@@ -127,7 +127,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.0</version>
+            <version>1.7.1</version>
             <scope>provided</scope>
         </dependency>
         <!-- Compile -->
@@ -168,7 +168,5 @@
         <project.build.resourceEncoding>ISO-8859-1</project.build.resourceEncoding>
         <maven.compiler.target>1.6</maven.compiler.target>
         <maven.compiler.source>1.6</maven.compiler.source>
-        <arquillian.version>1.0.2.Final</arquillian.version>
-        <jboss.version>7.1.1.Final</jboss.version>
     </properties>
 </project>

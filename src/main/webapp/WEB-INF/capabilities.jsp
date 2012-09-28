@@ -7,9 +7,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title>Page Title</title><!-- TODO -->
+        <title>DDR Compare</title>
 
-        <!-- Link Tags -->
         <style>
             table {
                 border-collapse: collapse;
@@ -41,6 +40,7 @@
                 border-top: 1px solid transparent;
                 color: #669;
                 padding: 8px;
+                white-space: nowrap;
             }
 
             table tr:hover td {
@@ -62,28 +62,36 @@
                     <th colspan="2"><a href="http://wurfl.sourceforge.net/">WURFL</a></th>
                 </tr>
                 <tr>
-                    <td><code>max_image_width / max_image_height</code></td>
+                    <td><code>max_image_width</code> <sup>(1)</sup> / <code>max_image_height</code></td>
                     <td>${requestScope.wurflCapability.maxImageWidth} / ${requestScope.wurflCapability.maxImageHeight}</td>
                 </tr>
                 <tr>
-                    <td><code>resolution_width / resolution_height</code></td>
+                    <td><code>resolution_width</code> / <code>resolution_height</code></td>
                     <td>${requestScope.wurflCapability.resolutionWidth} / ${requestScope.wurflCapability.resolutionHeight}</td>
                 </tr>
                 <tr>
                     <th colspan="2"><a href="http://www.openddr.org/">OpenDDR</a></th>
                 </tr>
                 <tr>
-                    <td><code>displayWidth / displayHeight</code></td>
+                    <td><code>displayWidth</code> / <code>displayHeight</code></td>
                     <td>${requestScope.openDDRCapability.displayWidth} / ${requestScope.openDDRCapability.displayHeight}</td>
                 </tr>
                 <tr>
                     <th colspan="2"><a href="http://51degrees.mobi/">51Degrees.mobi</a></th>
                 </tr>
                 <tr>
-                    <td><code>ScreenPixelsWidth / ScreenPixelsHeight</code></td>
+                    <td><code>ScreenPixelsWidth</code> / <code>ScreenPixelsHeight</code></td>
                     <td>${requestScope.fiftyoneCapability.screenPixelsWidth} / ${requestScope.fiftyoneCapability.screenPixelsHeight}</td>
                 </tr>
             </tbody>
         </table>
+
+        <p><sup>(1)</sup> <code>max_image_width</code> capability is very handy:</p>
+        <blockquote cite="http://wurfl.sourceforge.net/help_doc.php">
+            Width of the images viewable (usable) width expressed in pixels.
+            This capability refers to the image when used in "mobile mode", i.e. when the page is served as XHTML MP,
+            or it uses meta-tags such as "viewport", "handheldfriendly", "mobileoptimised" to disable "web rendering"
+            and force a mobile user-experience.
+        </blockquote>
     </body>
 </html>

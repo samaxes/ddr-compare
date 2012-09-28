@@ -1,19 +1,20 @@
-/** TODO...
+/*
+ * DDR Compare
+ * https://github.com/samaxes/ddr-compare
  *
+ * Copyright 2012 samaxes.com
  *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
+ *      http://www.apache.org/licenses/LICENSE-2.0
  *
- *
- * $Id: WURFLService.java,v 1.1 2012/05/31 12:03:09 ssantos Exp $
- *
- * Copyright (c) Present Technologies Lda., All Rights Reserved.
- * (www.present-technologies.com)
- *
- * This software is the proprietary information of Present Technologies Lda.
- * Use is subject to license terms.
- *
- * Last changed on $Date: 2012/05/31 12:03:09 $
- * Last changed by $Author: ssantos $
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 package com.samaxes.ddr.wurfl;
 
@@ -32,10 +33,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Singleton to access {@link WURFLManager} and {@link WURFLUtils} instances.
+ * Singleton that loads repository file on startup and gives access to {@link WURFLManager} and {@link WURFLUtils}
+ * instances.
  *
  * @author Samuel Santos
- * @version $Revision: 1.1 $
  */
 @Startup
 @Singleton
@@ -50,12 +51,10 @@ public class WURFLService {
      * Starts the Device Description Repository API service.
      */
     @PostConstruct
-    public void start() {
-        if (wurflHolder == null) {
-            LOGGER.info("Starting Device Description Repository API service.");
+    private void start() {
+        LOGGER.info("Starting WURFL service.");
 
-            wurflHolder = new CustomWURFLHolder(WURFLService.class.getResource("/wurfl/wurfl-2.1.1.xml.gz").toString());
-        }
+        wurflHolder = new CustomWURFLHolder(WURFLService.class.getResource("/wurfl/wurfl-2.1.1.xml.gz").toString());
     }
 
     /**
