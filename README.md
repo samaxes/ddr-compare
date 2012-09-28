@@ -19,5 +19,5 @@ Build the project:
 DDR Compare needs a Java EE application server to run. Follow these steps to deploy it to JBoss AS:
 
 1. Deploy the exploded WAR file to your application server.
-1. Open ```WAR/WEB-INF/classes/openddr/oddr.properties``` file and replace ```<BASEDIR>``` with the complete system path to the ```openddr``` directory.
+1. Open the file ```WAR/WEB-INF/classes/openddr/oddr.properties``` and replace ```<BASEDIR>``` with the complete system path to the ```openddr``` directory.
 1. Start your application server and point your browser to http://localhost[:8080]/ddr. 
