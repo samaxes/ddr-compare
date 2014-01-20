@@ -51,7 +51,7 @@ public class TestSuite {
     }
 
     @BeforeClass
-    public static void setUp() throws NamingException {
+    public static void setUp() {
         LOGGER.info("Starting EJB container.");
         context = EJBContainer.createEJBContainer().getContext();
     }

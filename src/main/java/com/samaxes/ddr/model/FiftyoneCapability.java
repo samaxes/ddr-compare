@@ -25,7 +25,6 @@ import org.slf4j.LoggerFactory;
 
 import fiftyone.mobile.detection.BaseDeviceInfo;
 import fiftyone.mobile.detection.Provider;
-import fiftyone.mobile.detection.binary.BinaryException;
 import fiftyone.mobile.detection.binary.Reader;
 
 /**
@@ -41,14 +40,9 @@ public class FiftyoneCapability {
 
     public FiftyoneCapability(HttpServletRequest request) {
         // Create a Provider object
-        Provider provider;
-        try {
-            provider = Reader.create();
-        } catch (BinaryException e) {
-            throw new RuntimeException(e);
-        }
+        Provider provider = Reader.create();
 
-        // Read in a HttpServletRequest or User Agent String
+        // Read in a User Agent String
         BaseDeviceInfo deviceInfo = provider.getDeviceInfo(request.getHeader("User-Agent"));
 
         // Get the value of a property
@@ -62,10 +56,6 @@ public class FiftyoneCapability {
         } catch (NumberFormatException e) {
             LOGGER.debug("Display height is not available. A default value will be used instead.");
         }
-
-        // Before exiting your application, ensure you dispose of the Provide to
-        // release it's resources such as it's thread pool
-        provider.destroy();
     }
 
     public Integer getScreenPixelsWidth() {

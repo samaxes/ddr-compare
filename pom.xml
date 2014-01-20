@@ -5,7 +5,7 @@
 
     <groupId>com.samaxes.ddr</groupId>
     <artifactId>ddr-compare</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <name>DDR Compare</name>
@@ -114,7 +114,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.10</version>
+            <version>4.11</version>
             <scope>test</scope>
         </dependency>
         <!-- Provided -->
@@ -127,7 +127,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.1</version>
+            <version>1.7.5</version>
             <scope>provided</scope>
         </dependency>
         <!-- Compile -->
@@ -137,9 +137,9 @@
             <version>1.2.2</version>
         </dependency><!-- End WURFL dependencies -->
         <dependency><!-- Start 51Degrees.mobi dependencies -->
-            <groupId>mobi.51degrees</groupId>
-            <artifactId>detection</artifactId>
-            <version>2.1.15.1</version>
+            <groupId>net.sourceforge.fiftyone-java</groupId>
+            <artifactId>51Degrees.mobi.detection.core</artifactId>
+            <version>2.2.9.1</version>
         </dependency><!-- End 51Degrees.mobi dependencies -->
         <dependency><!-- Start OpenDDR dependencies -->
             <groupId>org.w3c.ddr.simple</groupId>
@@ -149,7 +149,7 @@
         <dependency>
             <groupId>org.openddr.simpleapi.oddr</groupId>
             <artifactId>OpenDDR-Simple-API</artifactId>
-            <version>1.0.0.10</version>
+            <version>1.0.0.24</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>

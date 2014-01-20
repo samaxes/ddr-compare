@@ -49,7 +49,7 @@ public class WURFLServiceTest {
     }
 
     @AfterClass
-    public static void tearDown() throws NamingException {
+    public static void tearDown() {
         service = null;
     }
 

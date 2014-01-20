@@ -48,7 +48,7 @@ public class OpenDDRServiceTest {
     }
 
     @AfterClass
-    public static void tearDown() throws NamingException {
+    public static void tearDown() {
         service = null;
     }
 
